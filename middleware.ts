@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-import { SESSION_COOKIE } from "@/lib/constants";
+const SESSION_COOKIE = "dh_session";
 
 export function middleware(request: NextRequest) {
   const session = request.cookies.get(SESSION_COOKIE)?.value;
